@@ -2,7 +2,7 @@ dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","o
 
 def substrings(words, dict)
     arr_of_words=words.split
-    a=dict.reduce(Hash.new(0)) do |result,current_word|
+    final_hash=dict.reduce(Hash.new(0)) do |result,current_word|
         i=0
         while i<arr_of_words.length
             if  arr_of_words[i].downcase.match?(current_word)
@@ -14,7 +14,7 @@ def substrings(words, dict)
         end
         result
     end
-  puts "Result is: #{a}"
+  puts "Result is: #{final_hash}"
 end
 
 substrings("Below", dictionary)
